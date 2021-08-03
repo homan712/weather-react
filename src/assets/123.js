@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 const api = {
-  key: "4f0eeb9ef8c79c5b1d52ba6c2be777b0",
+  key: "7d4ef5d23648c7c62acd3ccfa1a0a30b",
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
@@ -29,7 +29,7 @@ function App() {
     let month = months[d.getMonth()];
     let year = d.getFullYear();
 
-    return `${day}, ${month} ${date}, ${year}`
+    return `${day} ${date} ${month} ${year}`
   }
 
   return (
@@ -55,7 +55,7 @@ function App() {
             <div className="temp">
               {Math.round(weather.main.temp)}°c
             </div>
-            <div className="weather">weather: {weather.weather[0].main}</div>
+            <div className="weather">{weather.weather[0].main}</div>
           </div>
         </div>
         ) : ('')}
